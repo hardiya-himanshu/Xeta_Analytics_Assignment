@@ -12,8 +12,8 @@ function Header({darkMode, onToggleTheme}) {
         },
     ]
   return (
-    <div className='absolute left-0 right-0 z-50'>
-        <nav className={`bg-customWhite/30 flex justify-between items-center py-2 px-10`}>
+    <div className='fixed left-0 right-0 z-50'>
+        <nav className={`bg-customWhite/30 backdrop-blur-sm flex justify-between items-center py-2 px-10 text-xl font-semibold`}>
             
             {/* FITSNAP LOGO */}
             <div >
@@ -37,8 +37,8 @@ function Header({darkMode, onToggleTheme}) {
             <div>
                 {/* CONTACT US BUTTON*/}
                 <div>
-                    <button>
-                        CONTACT US
+                    <button className='py-2 mx-3 border-blue-900 bg-blue-500/10 text-blue-900 border-2 px-4 rounded-full font-semibold'>
+                        Contact Us
                     </button>
                 </div>
             </div>
