@@ -7,10 +7,10 @@ import Details from './components/pages/Details'
 import Features from './components/pages/Features'
 import Tutorial from './components/pages/Tutorial'
 import Clients from './components/pages/Clients'
-
+import ThingsYouNeed from './components/pages/ThingsYouNeed'
+import Benifits from './components/pages/Benifits'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -23,6 +23,8 @@ function App() {
         <Features/>
         <Tutorial/>
         <Clients/>
+        <ThingsYouNeed/>
+        <Benifits/>
       </main>
       <footer>
         <Footer/>

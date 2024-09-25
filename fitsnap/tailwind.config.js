@@ -12,6 +12,7 @@ export default {
         customBlack: 'black',
         customWhite: 'white',
         customBlue: '#5E9ED7',
+        customBlue2: '#13118F',
         custom1: '#7D8DC7',
         custom2: '#5E9ED7',
         custom3: '#C46DA0',

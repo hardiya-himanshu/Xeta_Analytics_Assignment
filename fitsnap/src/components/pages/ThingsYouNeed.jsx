@@ -1,0 +1,18 @@
+import React from 'react'
+
+function ThingsYouNeed() {
+  return (
+    <div>
+        <h1 className='text-6xl font-semibold text-center mt-32 mb-10 mx-auto'>THINGS YOU NEED</h1>
+        <div className='relative h-[1000px] w-full'>
+            <img src={'../assets/images/things-bg.jpeg'} alt="Things You Need" className='h-full w-full object-cover' />
+            <div className='absolute bg-customWhite/40 h-full w-full z-10 top-0 left-0'></div>
+            <img src="../assets/images/things-1.png" alt="Headphones" className='absolute top-36 left-1/4 transform -translate-x-44 -translate-y-1/2 w-96 z-20' />
+            <img src="../assets/images/things-2.png" alt="A Tab With FitSnap" className='absolute top-3/4 left-1/4 transform translate-x-[440px] -translate-y-20 w-96 z-20' />
+            <img src="../assets/images/things-3.png" alt="Fitness Band" className='absolute top-96 left-1/4 transform -translate-x-56 translate-y-[560px] w-96 z-20' />
+        </div>
+    </div>
+  )
+}
+
+export default ThingsYouNeed
