@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import FitSnapTheme from '../../utils/fitsnapTheme'
+import FitSnapTheme from '../../utils/FitsnapTheme'
+
 
 function Header({darkMode, onToggleTheme}) {
 
@@ -13,7 +14,7 @@ function Header({darkMode, onToggleTheme}) {
     ]
   return (
     <div className='fixed left-0 right-0 z-50'>
-        <nav className={`bg-customWhite/30 backdrop-blur-sm flex justify-between items-center py-2 px-10 text-xl font-semibold`}>
+        <nav className={`${darkMode?"bg-customDark/30 text-customWhite":"bg-customWhite/30 text-customBlack"} backdrop-blur-sm flex justify-between items-center py-2 px-10 text-xl font-semibold`}>
             
             {/* FITSNAP LOGO */}
             <div >
@@ -37,7 +38,7 @@ function Header({darkMode, onToggleTheme}) {
             <div>
                 {/* CONTACT US BUTTON*/}
                 <div>
-                    <button className='py-2 mx-3 border-blue-900 bg-blue-500/10 text-blue-900 border-2 px-4 rounded-full font-semibold'>
+                    <button className={`py-2 mx-3 border-blue-900 ${darkMode?"bg-white/50":"bg-black/50"} text-blue-900 border-2 px-4 rounded-full font-semibold cursor-pointer`}>
                         Contact Us
                     </button>
                 </div>

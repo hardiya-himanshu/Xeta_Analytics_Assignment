@@ -1,6 +1,8 @@
 import React, {useRef, useEffect} from 'react'
+import FitSnapTheme from '../../utils/FitsnapTheme'
 
-function Features() {
+
+function Features({darkMode}) {
     const videoRef = useRef(null);
     useEffect(() => {
     if (videoRef.current) {
@@ -43,14 +45,14 @@ function Features() {
         },
     ]
   return (
-    <div>
+    <div className={`pt-10 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
       <h1 className='text-6xl font-bold text-center'>
       WHY CHOOSE FITSNAP
       </h1>
       <h4 className='text-2xl text-center my-8'>
       GET REALTIME UPDATE WITH AI
       </h4>
-      <ul className='flex flex-col mx-20 mt-14 mb-20'>
+      <ul className='flex flex-col mx-20 mt-14 pb-20'>
             {
                 features.map((feature) => (
                     <li key={feature.id} className='text-customWhite'>
@@ -96,4 +98,4 @@ function Features() {
   )
 }
 
-export default Features
+export default FitSnapTheme(Features)

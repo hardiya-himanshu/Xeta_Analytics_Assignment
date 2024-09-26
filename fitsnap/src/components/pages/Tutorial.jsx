@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import FitSnapTheme from '../../utils/FitsnapTheme'
 
 
-
-function Tutorial() {
+function Tutorial({darkMode}) {
     const apiKey = import.meta.env.VITE_GOOGLE_API_KEY; 
     const url = "https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg";
     const [videoTitle, setVideoTitle] = useState('');
@@ -41,7 +41,7 @@ function Tutorial() {
   }, [url]);
 
   return (
-    <div>
+    <div className={`pt-32 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
         <h1 className='text-6xl font-bold text-center'>
             TUTORIAL
         </h1>
@@ -49,7 +49,7 @@ function Tutorial() {
             GET YOUR EXERCISE TUTORIAL VIDEOS
         </h4>
 
-        <div className='relative bg-customBlue h-screen mt-14 mb-20 flex justify-center items-center p-20'>
+        <div className='relative bg-customBlue h-screen mt-14 flex justify-center items-center p-20'>
             <img src="/assets/images/tutorial-image.png" alt="grill-image" className='absolute right-0  h-full ' />
             <div className='flex gap-20'>
                 <h1 className='text-customWhite text-5xl font-semibold w-1/2 flex flex-col justify-center'>
@@ -62,7 +62,7 @@ function Tutorial() {
                         </div>
                         <div class="py-6 px-2 flex justify-between items-center">
                             <div className='flex flex-col gap-2'>
-                            <h3 className='w-96 text-wrap'>{videoTitle}</h3>
+                            <h3 className='w-96 text-wrap text-customBlack'>{videoTitle}</h3>
                             <a href={url} target="_blank" className='w-fit'>
                             <button className='flex items-center gap-2 text-sm text-gray-700'>
                                 <img src="/assets/icons/youtube.png" className='w-4 h-4 ' alt="youtube" />
@@ -82,4 +82,4 @@ function Tutorial() {
   )
 }
 
-export default Tutorial
+export default FitSnapTheme(Tutorial)

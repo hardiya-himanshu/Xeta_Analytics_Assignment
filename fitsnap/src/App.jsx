@@ -9,7 +9,7 @@ import Tutorial from './components/pages/Tutorial'
 import Clients from './components/pages/Clients'
 import ThingsYouNeed from './components/pages/ThingsYouNeed'
 import Benifits from './components/pages/Benifits'
-
+import Contact from './components/pages/Contact'
 function App() {
 
   return (
@@ -25,6 +25,7 @@ function App() {
         <Clients/>
         <ThingsYouNeed/>
         <Benifits/>
+        <Contact/>
       </main>
       <footer>
         <Footer/>

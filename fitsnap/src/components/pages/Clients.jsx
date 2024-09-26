@@ -1,6 +1,7 @@
 import React from 'react'
+import FitSnapTheme from '../../utils/FitsnapTheme'
 
-function Clients() {
+function Clients({darkMode}) {
   const reviews = [
     {
       name: "Riya Awasthi",
@@ -34,9 +35,9 @@ function Clients() {
     },
   ]
   return (
-    <div >
-      <h1 className='text-6xl font-semibold text-center mt-32 mb-10 max-w-[800px] mx-auto'>WHAT OUR CLIENTS SAY ABOUT US</h1>
-      <div className='overflow-x-scroll scrollbar-hide scroll-smooth flex gap-4 m-20 mb-20  items-center'>
+    <div className={`pt-28 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
+      <h1 className='text-6xl font-semibold text-center mt-16 mb-16 max-w-[800px] mx-auto'>WHAT OUR CLIENTS SAY ABOUT US</h1>
+      <div className='overflow-x-scroll scrollbar-hide scroll-smooth flex gap-4 px-20 pb-10  items-center'>
         {reviews.map((review, index) => (
           <div key={index} className=' min-w-[500px] flex flex-col justify-between items-start h-[500px] border-2 border-customBlue2 rounded-sm p-10'>
             <div>
@@ -53,4 +54,4 @@ function Clients() {
   )
 }
 
-export default Clients
+export default FitSnapTheme(Clients)

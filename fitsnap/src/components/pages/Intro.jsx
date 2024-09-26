@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react'
+import FitSnapTheme from '../../utils/FitsnapTheme'
 
-function Intro() {
+function Intro({darkMode}) {
   const videoRef = useRef(null);
   useEffect(() => {
     if (videoRef.current) {
@@ -9,7 +10,7 @@ function Intro() {
   }, []);
 
   return (
-    <div className='relative border-none '>
+    <div className={`relative border-none ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
         {/* BG-VIDEO */}
         <div className='overflow-hidden'>
             <video className='bg-cover bg-center object-cover' ref={videoRef} loop playsInline muted>
@@ -19,10 +20,10 @@ function Intro() {
         </div>
         {/* BOTTOM_WAVE_DIV */}
         <div className="bottom-0 absolute translate-y-1 z-40 border-none">
-            <img src="/assets/images/wave-div.png" className='bg-no-repeat bg-cover w-screen bottom-0' alt="" />
+            <img src={`${darkMode?"/assets/images/wave-div-dark.png":"/assets/images/wave-div.png"}`} className='bg-no-repeat bg-cover w-screen bottom-0' alt="" />
         </div>
         <div className='absolute top-0 z-50 w-full h-full'>
-            <div className='flex flex-col justify-center items-center h-full max-w-4xl mx-auto text-center'>
+            <div className='flex flex-col justify-center items-center gap-10 h-full max-w-4xl mx-auto text-center'>
                 <h1 className='text-white text-6xl font-bold italic'>Fitsnap for GYM</h1>
                 <p className='text-white text-2xl'>Welcome to the next generation of fitness! At FitSnap, we are thrilled  to introduce the power of Artificial Intelligence (AI) to revolutionize your gym experience.</p>
             </div>
@@ -31,4 +32,4 @@ function Intro() {
   )
 }
 
-export default Intro
+export default FitSnapTheme(Intro)

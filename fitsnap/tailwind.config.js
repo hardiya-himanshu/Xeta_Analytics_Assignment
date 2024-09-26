@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         customLight: '#F2F2F2',
-        customDark: '#1A1A1A',
+        customDark: '#020202',
         customBlack: 'black',
         customWhite: 'white',
         customBlue: '#5E9ED7',
