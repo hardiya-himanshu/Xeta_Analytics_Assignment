@@ -35,7 +35,7 @@ function Clients({darkMode}) {
     },
   ]
   return (
-    <div className={`pt-28 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
+    <div id='reviews' className={`pt-14 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
       <h1 className='text-6xl font-semibold text-center mt-16 mb-16 max-w-[800px] mx-auto'>WHAT OUR CLIENTS SAY ABOUT US</h1>
       <div className='overflow-x-scroll scrollbar-hide scroll-smooth flex gap-4 px-20 pb-10  items-center'>
         {reviews.map((review, index) => (

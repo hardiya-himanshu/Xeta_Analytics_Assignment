@@ -7,7 +7,7 @@ function Footer({darkMode}) {
     <div className='flex flex-col gap-6  max-w-[500px] items-start'>
 
         <div>
-          <img src="/assets/images/fitsnap-logo.png" alt="fitsnap-logo" className='w-30 h-20 -translate-x-5' />
+          <img src={darkMode?"/assets/images/fitsnap-logo.png":"/assets/images/fitsnap-logo-dark.png"} alt="fitsnap-logo" className='w-30 h-20 -translate-x-4' />
         </div>
         <div className='text-5xl font-bold'>
           Get FitSnap

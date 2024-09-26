@@ -41,7 +41,7 @@ function Tutorial({darkMode}) {
   }, [url]);
 
   return (
-    <div className={`pt-32 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
+    <div id='tutorial' className={`pt-32 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
         <h1 className='text-6xl font-bold text-center'>
             TUTORIAL
         </h1>
@@ -55,12 +55,12 @@ function Tutorial({darkMode}) {
                 <h1 className='text-customWhite text-5xl font-semibold w-1/2 flex flex-col justify-center'>
                 LEARN PROPER SQUAT TECHNIQUE WITH THIS EASY-TO-FOLLOW VIDEO GUIDE.
                 </h1>
-                <div className='w-fit border-2 z-40 p-2 bg-customWhite rounded-md' >
+                <div className='w-fit border-2 z-20 p-2 bg-customWhite rounded-md' >
                     <div>
-                        <div class="rounded-sm overflow-hidden">
-                            <iframe width="450" height="250" src="https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div className="rounded-sm overflow-hidden">
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         </div>
-                        <div class="py-6 px-2 flex justify-between items-center">
+                        <div className="py-6 px-2 flex justify-between items-center">
                             <div className='flex flex-col gap-2'>
                             <h3 className='w-96 text-wrap text-customBlack'>{videoTitle}</h3>
                             <a href={url} target="_blank" className='w-fit'>

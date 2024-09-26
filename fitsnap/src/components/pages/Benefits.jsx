@@ -1,9 +1,9 @@
 import React from 'react'
 import FitSnapTheme from '../../utils/FitsnapTheme'
 
-function Benifits({darkMode}) {
+function Benefits({darkMode}) {
 
-    const benifits = [
+    const benefits = [
         {
             name: '24*7 AI Trainer'
         },
@@ -42,13 +42,13 @@ function Benifits({darkMode}) {
         },
     ]
   return (
-    <div className={`py-20 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
+    <div id='benefits' className={`py-20 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
         <h1 className='text-9xl italic tracking-wider font-thin text-center pb-20  mx-auto'>REVOLUTIONIZE YOU</h1>
         <h2 className='text-6xl font-semibold text-center mb-20 mx-auto'>BENEFITS</h2>
         <div className='gap-32 flex justify-center items-center'>
             <ul className='border-2 border-customBlue2 p-8 rounded-xl flex flex-col gap-4 min-w-[350px]'>
                 {
-                    benifits.map((benifit, index)=>{
+                    benefits.map((benifit, index)=>{
                         return(
                             <li key={index} className='flex justify-between items-center'>
                                 <h4 className='text-md font-semibold'>{benifit.name}</h4>
@@ -72,4 +72,4 @@ function Benifits({darkMode}) {
   )
 }
 
-export default FitSnapTheme(Benifits)
+export default FitSnapTheme(Benefits)

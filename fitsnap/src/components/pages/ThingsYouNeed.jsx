@@ -3,7 +3,7 @@ import FitSnapTheme from '../../utils/FitsnapTheme'
 
 function ThingsYouNeed({darkMode}) {
   return (
-    <div className={`py-10 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
+    <div id='things' className={`py-10 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
         <h1 className='text-6xl font-semibold text-center mt-28 mb-16 mx-auto'>THINGS YOU NEED</h1>
         <div className='relative h-[1000px] w-full'>
             <img src={'../assets/images/things-bg.jpeg'} alt="Things You Need" className='h-full w-full object-cover' />

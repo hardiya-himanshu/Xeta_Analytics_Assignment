@@ -45,7 +45,7 @@ function Features({darkMode}) {
         },
     ]
   return (
-    <div className={`pt-10 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
+    <div id='features' className={`pt-20 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
       <h1 className='text-6xl font-bold text-center'>
       WHY CHOOSE FITSNAP
       </h1>

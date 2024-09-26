@@ -8,7 +8,7 @@ import Features from './components/pages/Features'
 import Tutorial from './components/pages/Tutorial'
 import Clients from './components/pages/Clients'
 import ThingsYouNeed from './components/pages/ThingsYouNeed'
-import Benifits from './components/pages/Benifits'
+import Benefits from './components/pages/Benefits'
 import Contact from './components/pages/Contact'
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
         <Tutorial/>
         <Clients/>
         <ThingsYouNeed/>
-        <Benifits/>
+        <Benefits/>
         <Contact/>
       </main>
       <footer>

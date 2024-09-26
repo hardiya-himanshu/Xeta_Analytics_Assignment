@@ -13,7 +13,7 @@ function Contact({darkMode}) {
         console.log(data);
       };
   return (
-    <div className={`p-32 flex justify-center items-center gap-20 ${darkMode ? 'bg-customDark text-customWhite' : 'bg-customLight text-customBlack'}`}>
+    <div id='contact' className={`p-32 flex justify-center items-center gap-20 ${darkMode ? 'bg-customDark text-customWhite' : 'bg-customLight text-customBlack'}`}>
       <div className='w-1/2 flex flex-col gap-10'>
         <h1 className='text-5xl font-bold'>WANT TO INSTALL FITSNAP AI CAMERA IN YOUR GYM?</h1>
         <h4 className='text-2xl font-semibold'>Please submit your details.</h4>
