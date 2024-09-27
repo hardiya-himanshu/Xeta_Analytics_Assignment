@@ -52,38 +52,38 @@ function Features({darkMode}) {
       <h4 className='text-2xl text-center my-8'>
       GET REALTIME UPDATE WITH AI
       </h4>
-      <ul className='flex flex-col mx-20 mt-14 pb-20'>
+      <ul className='flex flex-col mx-20 mt-14 pb-20 flex-wrap'>
             {
                 features.map((feature) => (
-                    <li key={feature.id} className='text-customWhite'>
+                    <li key={feature.id} className='text-customWhite flex flex-col flex-wrap'>
                         {
                             (feature.id % 2 !==0)?
-                                <div className='flex flex-row flex-wrap h-[450px]'>
-                                    <div className='w-1/2 overflow-hidden h-full'>     
+                                <div className='flex flex-wrap w-full min-h-[450px]'>
+                                    <div className='w-full xl:w-1/2 min-w-[450px] min-h-[450px]'>     
                                     {feature.type === "image"?
-                                        <img src={feature.file} alt={feature.title} className='w-full bg-cover bg-center h-full'/>
+                                        <img src={feature.file} alt={feature.title} className='w-full object-cover min-h-[450px] h-full'/>
                                         :
-                                        <video className='w-full bg-cover bg-center h-full' ref={videoRef} loop playsInline muted>
+                                        <video className='w-full object-cover min-h-[450px] h-full' ref={videoRef} loop playsInline muted>
                                             <source src={feature.file} type="video/mp4"/>
                                         </video>
                                     }
                                     </div>
-                                    <div className={`w-1/2 ${feature.bgColor} p-14 flex flex-col justify-center gap-10 h-full`}>
+                                    <div className={`xl:w-1/2 min-w-[450px] min-h-[450px] ${feature.bgColor} p-14 flex flex-col justify-center gap-10 w-full`}>
                                         <h3 className='text-6xl font-semiboldold'>{feature.title}</h3>
                                         <p className='text-2xl'>{feature.description}</p>
                                     </div>
                                 </div>
                                     :
-                                <div className='flex flex-row flex-wrap h-[450px]'>                             
-                                    <div className={`w-1/2 ${feature.bgColor} p-14 flex flex-col justify-center gap-10 h-full`}>
+                                <div className='flex flex-wrap w-full min-w-[450px] min-h-[450px]'>                             
+                                    <div className={`w-full xl:w-1/2 xl:order-1 order-2 min-w-[450px] min-h-[450px] ${feature.bgColor} p-14 flex flex-col justify-center gap-10 h-full`}>
                                         <h3 className='text-6xl font-semiboldold'>{feature.title}</h3>
                                         <p className='text-2xl'>{feature.description}</p>
                                     </div>
-                                    <div className='w-1/2 overflow-hidden h-full'>
+                                    <div className='w-full xl:w-1/2 xl:order-2 order-1 min-w-[450px] min-h-[450px]  h-full'>
                                     {feature.type === "image"?
-                                        <img src={feature.file} alt={feature.title} className='w-full bg-cover bg-center h-full'/>
+                                        <img src={feature.file} alt={feature.title} className='w-full object-cover min-h-[450px] h-full'/>
                                         :
-                                        <video  className='h-full object-cover w-full ' ref={videoRef} loop playsInline muted>
+                                        <video  className='h-full object-cover min-h-[450px] w-full ' ref={videoRef} loop playsInline muted>
                                             <source src={feature.file} type="video/mp4"/>
                                         </video>
                                     }

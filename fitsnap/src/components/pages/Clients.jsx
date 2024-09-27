@@ -36,10 +36,10 @@ function Clients({darkMode}) {
   ]
   return (
     <div id='reviews' className={`pt-14 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
-      <h1 className='text-6xl font-semibold text-center mt-16 mb-16 max-w-[800px] mx-auto'>WHAT OUR CLIENTS SAY ABOUT US</h1>
-      <div className='overflow-x-scroll scrollbar-hide scroll-smooth flex gap-4 px-20 pb-10  items-center'>
+      <h1 className='sm:text-6xl text-5xl font-semibold text-center mt-16 mb-16 max-w-[800px] mx-auto'>WHAT OUR CLIENTS SAY ABOUT US</h1>
+      <div className='overflow-x-scroll scrollbar-hide scroll-smooth flex gap-4 sm:px-20 px-4 pb-10  items-center'>
         {reviews.map((review, index) => (
-          <div key={index} className=' min-w-[500px] flex flex-col justify-between items-start h-[500px] border-2 border-customBlue2 rounded-sm p-10'>
+          <div key={index} className='min-w-[280px] w-[500px] sm:min-w-[500px] flex flex-col justify-between items-start h-[500px] border-2 border-customBlue2 rounded-md p-10 shadow-lg shadow-customBlue2/50'>
             <div>
             <p className='text-xl'>{review.review}</p>
             </div>

@@ -42,27 +42,26 @@ function Tutorial({darkMode}) {
 
   return (
     <div id='tutorial' className={`pt-32 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
-        <h1 className='text-6xl font-bold text-center'>
+        <h1 className='sm:text-6xl text-5xl font-bold text-center'>
             TUTORIAL
         </h1>
         <h4 className='text-2xl text-center my-8'>
             GET YOUR EXERCISE TUTORIAL VIDEOS
         </h4>
 
-        <div className='relative bg-customBlue h-screen mt-14 flex justify-center items-center p-20'>
-            <img src="/assets/images/tutorial-image.png" alt="grill-image" className='absolute right-0  h-full ' />
-            <div className='flex gap-20'>
-                <h1 className='text-customWhite text-5xl font-semibold w-1/2 flex flex-col justify-center'>
+        <div className='relative bg-customBlue lg:p-20 p-4 min-h-fit xl:h-screen mt-14 flex justify-center items-center '>
+            <img src="/assets/images/tutorial-image.png" alt="grill-image" className='absolute right-0 bg-contain h-full' />
+            <div className='flex gap-20 flex-wrap justify-center'>
+                <h1 className='text-customWhite sm:text-5xl text-4xl font-semibold xl:w-1/2 flex flex-col justify-center'>
                 LEARN PROPER SQUAT TECHNIQUE WITH THIS EASY-TO-FOLLOW VIDEO GUIDE.
                 </h1>
-                <div className='w-fit border-2 z-20 p-2 bg-customWhite rounded-md' >
-                    <div>
+                <div className='w-[300px] sm:w-[450px] z-20 p-2 bg-customWhite rounded-md' >
                         <div className="rounded-sm overflow-hidden">
-                            <iframe width="450" height="250" src="https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            <iframe minWidth="280" minHeight="150" width="450px" height="250px" className='sm:w-full w-[300px]' src="https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         </div>
                         <div className="py-6 px-2 flex justify-between items-center">
                             <div className='flex flex-col gap-2'>
-                            <h3 className='w-96 text-wrap text-customBlack'>{videoTitle}</h3>
+                            <h3 className='text-wrap text-customBlack w-fit'>{videoTitle}</h3>
                             <a href={url} target="_blank" className='w-fit'>
                             <button className='flex items-center gap-2 text-sm text-gray-700'>
                                 <img src="/assets/icons/youtube.png" className='w-4 h-4 ' alt="youtube" />
@@ -74,7 +73,6 @@ function Tutorial({darkMode}) {
                                 <img src="/assets/icons/info.png" alt="info" className='w-4 h-4 cursor-pointer'/>
                             </div> 
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -13,13 +13,13 @@ function Contact({darkMode}) {
         console.log(data);
       };
   return (
-    <div id='contact' className={`p-32 flex justify-center items-center gap-20 ${darkMode ? 'bg-customDark text-customWhite' : 'bg-customLight text-customBlack'}`}>
-      <div className='w-1/2 flex flex-col gap-10'>
-        <h1 className='text-5xl font-bold'>WANT TO INSTALL FITSNAP AI CAMERA IN YOUR GYM?</h1>
+    <div id='contact' className={`lg:px-32  py-32 flex flex-wrap justify-center items-center gap-20 ${darkMode ? 'bg-customDark text-customWhite' : 'bg-customLight text-customBlack'} border-2 border-white`}>
+      <div className=' max-w-[600px] w-full p-4 flex flex-col gap-10 border-2 border-white'>
+        <h1 className='sm:text-6xl text-5xl font-bold'>WANT TO INSTALL FITSNAP AI CAMERA IN YOUR GYM?</h1>
         <h4 className='text-2xl font-semibold'>Please submit your details.</h4>
       </div>
-      <div className='w-1/2'>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-14">
+      <div className='w-full max-w-[500px]'>
+      <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-14 md:max-w-[500px] w-full min-w-[260px] border-2 border-white">
         {/* Name of Gym */}
         <div className="relative py-4">
           <input

@@ -43,10 +43,10 @@ function Benefits({darkMode}) {
     ]
   return (
     <div id='benefits' className={`py-20 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
-        <h1 className='text-9xl italic tracking-wider font-thin text-center pb-20  mx-auto'>REVOLUTIONIZE YOU</h1>
-        <h2 className='text-6xl font-semibold text-center mb-20 mx-auto'>BENEFITS</h2>
-        <div className='gap-32 flex justify-center items-center'>
-            <ul className='border-2 border-customBlue2 p-8 rounded-xl flex flex-col gap-4 min-w-[350px]'>
+        <h1 className='xl:text-9xl md:text-7xl sm:text-5xl text-3xl italic tracking-wider font-thin text-center sm:pb-20 pb-10  mx-auto'>REVOLUTIONIZE YOU</h1>
+        <h2 className='sm:text-6xl text-5xl font-semibold text-center mb-20 mx-auto'>BENEFITS</h2>
+        <div className='gap-32 flex justify-center items-center flex-wrap'>
+            <ul className='border-2 m-2 border-customBlue2 p-8 rounded-xl flex flex-col gap-4 min-w-[300px] w-[350px]'>
                 {
                     benefits.map((benifit, index)=>{
                         return(
@@ -58,7 +58,7 @@ function Benefits({darkMode}) {
                     })
                 }
             </ul>
-            <div className='flex flex-col gap-10 justify-center items-start w-[600px]'>
+            <div className='flex p-8 flex-col gap-10 justify-center items-start w-[600px]'>
                 <p className='text-2xl'>
                     To benefits of all the features of FitSnap, the ideal tablet featuring 8GB RAM and an immersive 11-inch screen should offer a balance of performance, display quality  
                 </p>
