@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react'
-import FitsnapTheme from '../../utils/FitsnapTheme'
+import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
 
 function Intro({darkMode}) {
   const videoRef = useRef(null);

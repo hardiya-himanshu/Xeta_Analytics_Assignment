@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleTheme } from '../store/themeSlice'
+import { toggleTheme } from '../store/themeSlice.js'
 
 const FitsnapTheme = (WrappedComponent) => {
 
@@ -20,7 +20,7 @@ const FitsnapTheme = (WrappedComponent) => {
             );
         } catch (error) {
             console.error("Error in FitsnapTheme HOC:", error);
-            return null; // or some fallback UI
+            return null;
         }
     }
 }

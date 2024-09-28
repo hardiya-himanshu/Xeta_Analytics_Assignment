@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react'
-import FitsnapTheme from '../../utils/FitsnapTheme'
+import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
 
 function Benefits({darkMode}) {
     const benefits = [
