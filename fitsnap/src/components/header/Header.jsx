@@ -25,7 +25,7 @@ function Header({darkMode, onToggleTheme}) {
     ]
   return (
     <div className='fixed right-0 left-0 top-0 z-40'>
-        <nav className={`${darkMode?` ${showMenu?"bg-customDark/100":"bg-customDark/50"} text-customWhite`:` ${showMenu?"bg-customLight/100":"bg-customLight/50"} text-customBlack`} backdrop-blur-sm flex justify-between items-center py-2 lg:px-10 sm:px-5 px-2 text-xl font-semibold`}>
+        <nav className={`${darkMode?` ${showMenu?"bg-customDark/100":"bg-customDark/50"} text-customWhite`:` ${showMenu?"bg-customLight/100":"bg-customLight/50"} text-customBlack`} backdrop-blur-sm flex justify-between items-center py-1 lg:px-10 sm:px-5 px-2 text-xl font-semibold`}>
             
             {/* FITSNAP LOGO */}
             <div >
