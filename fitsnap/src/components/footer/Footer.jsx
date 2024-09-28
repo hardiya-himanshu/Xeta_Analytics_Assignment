@@ -1,5 +1,5 @@
 import React from 'react'
-import FitsnapFooter from '../../utils/FitsnapTheme'
+import FitSnapTheme from '../../utils/FitsnapTheme'
 
 function Footer({darkMode}) {
   return (
@@ -49,4 +49,4 @@ our mailing list.
   )
 }
 
-export default FitsnapFooter(Footer)
+export default FitSnapTheme(Footer)
