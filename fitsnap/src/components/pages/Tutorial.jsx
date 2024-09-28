@@ -84,7 +84,7 @@ function Tutorial({darkMode}) {
                 </h1>
                 <div className='w-[300px] sm:w-[450px] z-20 p-2 bg-customWhite rounded-md' >
                         <div className="rounded-sm overflow-hidden">
-                            <iframe minWidth="280" minHeight="150" width="450px" height="250px" className='sm:w-full w-[300px]' src="https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            <iframe minwidth="280" minheight="150" width="450px" height="250px" className='sm:w-full w-[300px]' src="https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         </div>
                         <div className="py-6 px-2 flex justify-between items-center">
                             <div className='flex flex-col gap-2'>
