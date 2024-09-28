@@ -1,7 +1,5 @@
 import React from 'react'
-import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
 import { useSelector } from 'react-redux'
-
 
 function Footer() {
   const darkMode = useSelector((state) => state.theme.darkMode);
