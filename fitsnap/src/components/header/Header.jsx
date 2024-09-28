@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FitsnapTheme from '../../utils/FitsnapTheme'
+import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
 import { Link as ScrollLink} from 'react-scroll'
 
 
