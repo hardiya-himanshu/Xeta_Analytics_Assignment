@@ -12,11 +12,8 @@ import Contact from './components/pages/Contact.jsx'
 function App() {
 
   return (
-    <>
-      <header>
+    <div>
         <Header/>
-      </header>
-      <main>
         <Intro/>
         <Details/>
         <Features/>
@@ -25,11 +22,8 @@ function App() {
         <ThingsYouNeed/>
         <Benefits/>
         <Contact/>
-      </main>
-      <footer>
         <Footer/>
-      </footer>
-    </>
+    </div>
   )
 }
 
