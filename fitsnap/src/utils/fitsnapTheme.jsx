@@ -6,18 +6,22 @@ const FitsnapTheme = (WrappedComponent) => {
 
     return (props)=>{
   
-        const darkMode = useSelector((state)=>state.theme.darkMode)
-        const dispatch = useDispatch()
-
-        const handleTheme = ()=>{
-            dispatch(toggleTheme())
+        try {
+            const darkMode = useSelector((state) => state.theme.darkMode);
+            const dispatch = useDispatch();
+            const handleTheme = () => {
+                dispatch(toggleTheme());
+            };
+    
+            return (
+                <div>
+                    <WrappedComponent {...props} darkMode={darkMode} onToggleTheme={handleTheme} />
+                </div>
+            );
+        } catch (error) {
+            console.error("Error in FitsnapTheme HOC:", error);
+            return null; // or some fallback UI
         }
-
-        return (
-            <div>
-              <WrappedComponent {...props} darkMode={darkMode} onToggleTheme={handleTheme} />
-            </div>
-        )
     }
 }
 
