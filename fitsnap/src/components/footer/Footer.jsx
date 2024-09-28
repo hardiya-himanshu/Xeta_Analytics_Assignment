@@ -1,10 +1,10 @@
 import React from 'react'
 import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
+import { useSelector } from 'react-redux'
 
 
-
-function Footer({darkMode}) {
-  console.log(require.resolve('../../utils/FitsnapTheme'));
+function Footer() {
+  const darkMode = useSelector((state) => state.theme.darkMode);
   return (
     <div className={`flex md:gap-10 gap-16 border-red-500 flex-wrap justify-between items-start md:px-32 sm:px-16 px-3 sm:py-28 py-16 ${darkMode ? 'bg-customDark text-customWhite' : 'bg-customLight text-customBlack'}`}> 
     <div className='flex flex-col gap-6  max-w-[500px] items-start'>
@@ -52,4 +52,4 @@ our mailing list.
   )
 }
 
-export default FitsnapTheme(Footer)
+export default Footer

@@ -1,8 +1,9 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import FitsnapTheme from '../../utils/FitsnapTheme.jsx';
-
-function Contact({darkMode}) {
+import { useSelector } from 'react-redux'
+  
+function Contact() {
+  const darkMode = useSelector((state) => state.theme.darkMode);
     const {
         register,
         handleSubmit,
@@ -141,4 +142,4 @@ function Contact({darkMode}) {
   )
 }
 
-export default FitsnapTheme(Contact)
+export default Contact
