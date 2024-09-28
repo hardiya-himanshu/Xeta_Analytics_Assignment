@@ -4,7 +4,7 @@ import { Link as ScrollLink} from 'react-scroll'
 
 
 function Header({darkMode, onToggleTheme}) {
-
+    const [showMenu, setShowMenu] = useState(false)
     const navItems = [
         {
           name: "Features",
@@ -25,7 +25,7 @@ function Header({darkMode, onToggleTheme}) {
     ]
   return (
     <div className='fixed right-0 left-0 top-0 z-40'>
-        <nav className={`${darkMode?"bg-customDark/40 text-customWhite":"bg-customWhite/40 text-customBlack"} backdrop-blur-sm flex justify-between items-center py-2 px-10 text-xl font-semibold`}>
+        <nav className={`${darkMode?` ${showMenu?"bg-customDark/100":"bg-customDark/50"} text-customWhite`:` ${showMenu?"bg-customLight/100":"bg-customLight/50"} text-customBlack`} backdrop-blur-sm flex justify-between items-center py-2 lg:px-10 sm:px-5 px-2 text-xl font-semibold`}>
             
             {/* FITSNAP LOGO */}
             <div >
@@ -35,7 +35,7 @@ function Header({darkMode, onToggleTheme}) {
             </div>
 
             {/* NAVITEMS */}
-            <div className=' hidden md:block'>
+            <div className=' hidden lg:block'>
                 <ul className='flex ml-auto flex-wrap items-center justify-center'>
                 {navItems.map((item, index) =>(
                     <li key={index}>
@@ -45,7 +45,7 @@ function Header({darkMode, onToggleTheme}) {
                         duration={100}
                         >
                         <button
-                        className=' mx-6 py-2 cursor-pointer z-50'
+                        className=' mx-6 py-2 cursor-pointer z-50 hover:text-blue-700 duration-300'
                         >{item.name}
                         </button>
                     </ScrollLink>
@@ -67,10 +67,43 @@ function Header({darkMode, onToggleTheme}) {
 
                 {/* CONTACT US BUTTON*/}
                 <ScrollLink to='contact' smooth={true} duration={100}>
-                    <button className={`py-2 mx-3 border-blue-900 bg-white/50 text-blue-900 border-2 px-4 rounded-full font-semibold cursor-pointer`}>
+                    <button className={`lg:block hidden py-2 mx-3 border-blue-900 bg-white text-blue-900 border-2 px-4 rounded-full font-semibold cursor-pointer`}>
                         Contact Us
                     </button>
                 </ScrollLink>
+
+                {/* MENUBAR */}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 cursor-pointer lg:hidden ml-5" onClick={()=>setShowMenu(!showMenu)}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+                {/* MOBILE MENU */}
+                {showMenu && (
+                  <div className={`lg:hidden absolute top-[78px] left-0 right-0 z-50 ${darkMode?"bg-customDark/100 text-customWhite":"bg-customLight/100 text-customBlack"} backdrop-blur-xl px-10 py-5`}>
+
+                    <ul className='flex flex-col items-center gap-3'>
+                      {navItems.map((item, index) =>(
+                    <li key={index}>
+                    <ScrollLink
+                        to={item.link}
+                        smooth={true}
+                        duration={100}
+                        >
+                        <button
+                        className=' mx-auto py-2 cursor-pointer'
+                        >{item.name}
+                        </button>
+                    </ScrollLink>
+                    </li>
+                      ))}
+                    <li>
+                    <ScrollLink to='contact' smooth={true} duration={100}>
+                      <button className=' mx-auto py-2 cursor-pointer'>Contact Us</button>
+                    </ScrollLink>
+                    </li>
+                    </ul>
+                  </div>
+                )}
             </div>
         </nav>
     </div>

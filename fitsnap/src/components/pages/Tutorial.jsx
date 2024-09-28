@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import FitSnapTheme from '../../utils/FitsnapTheme'
 
 
@@ -6,6 +6,7 @@ function Tutorial({darkMode}) {
     const apiKey = import.meta.env.VITE_GOOGLE_API_KEY; 
     const url = "https://www.youtube.com/embed/xqvCmoLULNY?si=DsXfzEwrmd_U7jNg";
     const [videoTitle, setVideoTitle] = useState('');
+    const animatedDiv = useRef(null);
 
   const extractVideoId = (url) => {
     const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
@@ -40,8 +41,33 @@ function Tutorial({darkMode}) {
     }
   }, [url]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-20');
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          // Reapply initial hidden classes when the element goes out of view
+          entry.target.classList.remove('opacity-100', 'translate-y-0');
+          entry.target.classList.add('opacity-0', 'translate-y-20');
+        }
+      });
+    });
+
+    if (animatedDiv.current) {
+      observer.observe(animatedDiv.current);
+    }
+
+    return () => {
+      if (animatedDiv.current) {
+        observer.unobserve(animatedDiv.current);
+      }
+    };
+  }, []);
+
   return (
-    <div id='tutorial' className={`pt-32 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
+    <div id='tutorial' className={`md:pt-32 pt-10 ${darkMode?"bg-customDark text-customWhite":"bg-customLight text-customBlack"}`}>
         <h1 className='sm:text-6xl text-5xl font-bold text-center'>
             TUTORIAL
         </h1>
@@ -49,10 +75,11 @@ function Tutorial({darkMode}) {
             GET YOUR EXERCISE TUTORIAL VIDEOS
         </h4>
 
-        <div className='relative bg-customBlue lg:p-20 p-4 min-h-fit xl:h-screen mt-14 flex justify-center items-center '>
+      <div ref={animatedDiv} className='opacity-0 transform translate-y-20 transition duration-700 ease-in-out'>
+        <div className='relative bg-customBlue lg:p-20 p-4 min-h-fit h-screen mt-14 flex justify-center items-center '>
             <img src="/assets/images/tutorial-image.png" alt="grill-image" className='absolute right-0 bg-contain h-full' />
-            <div className='flex gap-20 flex-wrap justify-center'>
-                <h1 className='text-customWhite sm:text-5xl text-4xl font-semibold xl:w-1/2 flex flex-col justify-center'>
+            <div className='flex md:gap-20 gap-10 flex-wrap justify-center'>
+                <h1 className='text-customWhite sm:text-5xl text-3xl font-semibold xl:w-1/2 flex flex-col justify-center'>
                 LEARN PROPER SQUAT TECHNIQUE WITH THIS EASY-TO-FOLLOW VIDEO GUIDE.
                 </h1>
                 <div className='w-[300px] sm:w-[450px] z-20 p-2 bg-customWhite rounded-md' >
@@ -76,6 +103,7 @@ function Tutorial({darkMode}) {
                 </div>
             </div>
         </div>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../store/themeSlice'
 
@@ -11,6 +11,7 @@ const FitSnapTheme = (WrappedComponent) => {
         const handleTheme = ()=>{
             dispatch(toggleTheme())
         }
+
 
         return (
             <div>

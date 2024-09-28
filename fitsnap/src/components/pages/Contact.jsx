@@ -13,13 +13,13 @@ function Contact({darkMode}) {
         console.log(data);
       };
   return (
-    <div id='contact' className={`lg:px-32  py-32 flex flex-wrap justify-center items-center gap-20 ${darkMode ? 'bg-customDark text-customWhite' : 'bg-customLight text-customBlack'} border-2 border-white`}>
-      <div className=' max-w-[600px] w-full p-4 flex flex-col gap-10 border-2 border-white'>
+    <div id='contact' className={`lg:px-32  md:py-32 py-10 flex flex-wrap justify-center items-center gap-20 ${darkMode ? 'bg-customDark text-customWhite' : 'bg-customLight text-customBlack'} `}>
+      <div className=' max-w-[600px] w-full p-4 flex flex-col gap-10 '>
         <h1 className='sm:text-6xl text-5xl font-bold'>WANT TO INSTALL FITSNAP AI CAMERA IN YOUR GYM?</h1>
         <h4 className='text-2xl font-semibold'>Please submit your details.</h4>
       </div>
       <div className='w-full max-w-[500px]'>
-      <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-14 md:max-w-[500px] w-full min-w-[260px] border-2 border-white">
+      <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-14 md:max-w-[500px] w-full min-w-[260px] ">
         {/* Name of Gym */}
         <div className="relative py-4">
           <input
@@ -130,7 +130,7 @@ function Contact({darkMode}) {
         <div>
           <button
             type="submit"
-            className={`w-fit text-lg ${darkMode?"bg-customWhite text-customBlack":"bg-customBlack text-customWhite"}  py-3 rounded-full px-4  ${darkMode?"hover:bg-gray-300":"hover:bg-gray-800"} `}
+            className={` w-fit text-lg ${darkMode?"bg-customWhite text-customBlack":"bg-customBlack text-customWhite"}  py-3 rounded-full px-4  ${darkMode?"hover:bg-customBlue2 hover:text-customWhite":"hover:bg-customBlue2 hover:text-customWhite"} hover:scale-105 hover:shadow-md hover:shadow-customBlue2/40 duration-300`}
           >
             Contact Us
           </button>
