@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react'
-import FitSnapTheme from '../../utils/FitsnapTheme'
+import FitsnapTheme from '../../utils/FitsnapTheme'
 
 function Clients({darkMode}) {
     const animatedDiv = useRef(null);
@@ -82,4 +82,4 @@ function Clients({darkMode}) {
   )
 }
 
-export default FitSnapTheme(Clients)
+export default FitsnapTheme(Clients)

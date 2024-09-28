@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import FitSnapTheme from '../../utils/FitsnapTheme';
+import FitsnapTheme from '../../utils/FitsnapTheme';
 
 function Contact({darkMode}) {
     const {
@@ -141,4 +141,4 @@ function Contact({darkMode}) {
   )
 }
 
-export default FitSnapTheme(Contact)
+export default FitsnapTheme(Contact)

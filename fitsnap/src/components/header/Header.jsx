@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FitSnapTheme from '../../utils/FitsnapTheme'
+import FitsnapTheme from '../../utils/FitsnapTheme'
 import { Link as ScrollLink} from 'react-scroll'
 
 
@@ -110,4 +110,4 @@ function Header({darkMode, onToggleTheme}) {
   )
 }
 
-export default FitSnapTheme(Header)
+export default FitsnapTheme(Header)

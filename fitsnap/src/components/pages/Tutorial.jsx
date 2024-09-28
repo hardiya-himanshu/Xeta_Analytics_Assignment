@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import FitSnapTheme from '../../utils/FitsnapTheme'
+import FitsnapTheme from '../../utils/FitsnapTheme'
 
 
 function Tutorial({darkMode}) {
@@ -108,4 +108,4 @@ function Tutorial({darkMode}) {
   )
 }
 
-export default FitSnapTheme(Tutorial)
+export default FitsnapTheme(Tutorial)

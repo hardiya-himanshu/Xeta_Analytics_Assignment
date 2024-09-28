@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react'
-import FitSnapTheme from '../../utils/FitsnapTheme'
+import FitsnapTheme from '../../utils/FitsnapTheme'
 
 function Benefits({darkMode}) {
     const benefits = [
@@ -98,4 +98,4 @@ function Benefits({darkMode}) {
   )
 }
 
-export default FitSnapTheme(Benefits)
+export default FitsnapTheme(Benefits)

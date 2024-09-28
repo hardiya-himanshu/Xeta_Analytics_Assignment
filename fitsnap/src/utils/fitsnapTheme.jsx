@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../store/themeSlice'
 
-const FitSnapTheme = (WrappedComponent) => {
+const FitsnapTheme = (WrappedComponent) => {
 
     return (props)=>{
   
@@ -21,4 +21,4 @@ const FitSnapTheme = (WrappedComponent) => {
     }
 }
 
-export default FitSnapTheme 
+export default FitsnapTheme 
