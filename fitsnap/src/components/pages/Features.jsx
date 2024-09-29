@@ -1,5 +1,4 @@
 import React, {useRef, useEffect} from 'react'
-import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
 
 
 function Features({darkMode}) {
@@ -8,8 +7,8 @@ function Features({darkMode}) {
 
     useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play();
-    }
+        videoRef.current.play();
+      }
     }, []);
 
     useEffect(() => {
@@ -158,4 +157,4 @@ function Features({darkMode}) {
   )
 }
 
-export default FitsnapTheme(Features)
+export default Features

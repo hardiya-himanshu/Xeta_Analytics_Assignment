@@ -1,5 +1,4 @@
 import React from 'react'
-import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
 
 function ThingsYouNeed({darkMode}) {
   return (
@@ -16,4 +15,4 @@ function ThingsYouNeed({darkMode}) {
   )
 }
 
-export default FitsnapTheme(ThingsYouNeed)
+export default ThingsYouNeed

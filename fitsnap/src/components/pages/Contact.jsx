@@ -1,9 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import { useSelector } from 'react-redux'
   
-function Contact() {
-  const darkMode = useSelector((state) => state.theme.darkMode);
+function Contact({darkMode}) {
     const {
         register,
         handleSubmit,

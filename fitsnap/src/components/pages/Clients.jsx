@@ -1,8 +1,7 @@
 import React, {useRef, useEffect} from 'react'
-import FitsnapTheme from '../../utils/FitsnapTheme.jsx'
 
 function Clients({darkMode}) {
-    const animatedDiv = useRef(null);
+  const animatedDiv = useRef(null);
   const reviews = [
     {
       name: "Riya Awasthi",
@@ -82,4 +81,4 @@ function Clients({darkMode}) {
   )
 }
 
-export default FitsnapTheme(Clients)
+export default Clients

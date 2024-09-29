@@ -1,15 +1,9 @@
 import React, { useState } from 'react'
 import { Link as ScrollLink} from 'react-scroll'
-import { useSelector, useDispatch } from 'react-redux'
-import { toggleTheme } from '../../store/themeSlice.js'
 
-function Header() {
+function Header({darkMode, handleTheme}) {
     const [showMenu, setShowMenu] = useState(false)
-    const darkMode = useSelector((state) => state.theme.darkMode);
-    const dispatch = useDispatch();
-    const handleTheme = () => {
-        dispatch(toggleTheme());
-    };
+    
     const navItems = [
         {
           name: "Features",
@@ -84,7 +78,7 @@ function Header() {
 
                 {/* MOBILE MENU */}
                 {showMenu && (
-                  <div className={`lg:hidden absolute top-[78px] left-0 right-0 z-50 ${darkMode?"bg-customDark/100 text-customWhite":"bg-customLight/100 text-customBlack"} backdrop-blur-xl px-10 py-5`}>
+                  <div className={`lg:hidden absolute top-[70px] left-0 right-0 z-50 ${darkMode?"bg-customDark/100 text-customWhite":"bg-customLight/100 text-customBlack"} backdrop-blur-xl px-10 py-5`}>
 
                     <ul className='flex flex-col items-center gap-3'>
                       {navItems.map((item, index) =>(
