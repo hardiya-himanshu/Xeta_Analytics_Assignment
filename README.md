@@ -1,10 +1,9 @@
 
 ![Logo](https://i.imghippo.com/files/zoGkA1727536393.png)
-[FitSnap](https://fitsnap-clone.netlify.app/)
 
 # FitSnap
 
-FitSnap is a AI powered software that revolutionize the gym experience.
+[FitSnap](https://fitsnap-clone.netlify.app/) is a AI powered software that revolutionize the gym experience.
 
 
 ## Features
